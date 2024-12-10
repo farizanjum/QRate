@@ -1,1 +1,1 @@
-web: gunicorn vercel_app:app 
+web: gunicorn run:app 
