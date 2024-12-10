@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pa's Pizzazz Feedback{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="language-toggle">
+        <span>हिंदी</span>
+        <div class="toggle-switch" onclick="toggleLanguage()">
+            <div class="toggle-switch-circle"></div>
+        </div>
+        <span>اردو</span>
+    </div>
+    
+    <img src="https://i.imgur.com/Y9YbWyi.png" alt="Pa's Pizzazz Logo" style="width: 150px; margin-bottom: 20px;">
+    
+    {% block content %}{% endblock %}
+    
+    <footer>Made with ❤️ by Fariz Anjum</footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html> 

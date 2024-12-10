@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 id="form-heading">Please provide your feedback:</h1>
+<form method="POST">
+    <input type="text" id="name-field" name="name" placeholder="Your name (optional)"><br>
+    <input type="text" id="mobile-field" name="mobile" placeholder="Enter your mobile number" required><br>
+    <textarea id="feedback-field" name="feedback" placeholder="Enter your feedback" required></textarea><br>
+    <button id="submit-button" type="submit">Submit</button>
+</form>
+{% endblock %} 
