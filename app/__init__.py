@@ -13,4 +13,8 @@ def create_app():
     from app.routes import main
     app.register_blueprint(main.bp)
     
-    return app 
+    @app.route('/health')
+    def health_check():
+        return {'status': 'healthy'}, 200
+    
+    return app
