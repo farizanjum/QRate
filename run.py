@@ -1,5 +1,5 @@
 from app import create_app
-import sys
+import os
 
 app = create_app()
 
