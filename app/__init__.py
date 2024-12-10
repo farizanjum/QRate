@@ -18,3 +18,6 @@ def create_app():
         return {'status': 'healthy'}, 200
     
     return app
+
+# Create the application instance
+app = create_app()
