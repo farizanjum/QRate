@@ -13,8 +13,4 @@ def create_app():
     from app.routes import main
     app.register_blueprint(main.bp)
     
-    # Initialize extensions
-    with app.app_context():
-        app.logger.info('Initializing application...')
-        
-    return app 
+    return app
