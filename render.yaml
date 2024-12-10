@@ -11,6 +11,4 @@ services:
         generateValue: true
       - key: PYTHONUNBUFFERED
         value: "true"
-      - key: PORT
-        value: 10000
     healthCheckPath: / 
