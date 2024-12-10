@@ -2,6 +2,8 @@
 
 QRate is an intelligent feedback collection and analysis system that uses AI to process customer feedback in real-time.
 
+https://qrate.onrender.com
+
 ## Features
 
 - **AI-Powered Sentiment Analysis**: Uses fine-tuned DistilBERT model for accurate sentiment classification
