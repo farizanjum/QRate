@@ -13,4 +13,4 @@ def create_app():
     from app.routes import main
     app.register_blueprint(main.bp)
     
-    return app
+    return app 
