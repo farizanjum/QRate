@@ -5,10 +5,11 @@ from app.utils.email import send_feedback_email
 bp = Blueprint('main', __name__)
 sentiment_analyzer = None
 
-@bp.before_app_first_request
+@bp.before_app_request
 def initialize_analyzer():
     global sentiment_analyzer
-    sentiment_analyzer = SentimentAnalyzer()
+    if sentiment_analyzer is None:
+        sentiment_analyzer = SentimentAnalyzer()
 
 @bp.route('/')
 def home():
@@ -46,4 +47,4 @@ def feedback():
             current_app.logger.error(f"Error processing feedback: {e}")
             return render_template('error.html', message="Internal Server Error"), 500
 
-    return render_template('feedback.html') 
+    return render_template('feedback.html')
